@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.itcast.mapper.BusinessMapper">
+
+    <select id="overview" resultType="cn.itcast.vo.OverviewVo">
+        select
+            count(*) businessTotal,
+            count(if(status = 1, 1,null)) businessWaitAllot ,
+            count(if(status = 2, 2,null)) businessWaitFollow,
+            count(if(status = 3, 3,null)) businessFollowing,
+            count(if(status = 4, 4,null)) businessFalse,
+            count(if(status = 5, 5,null)) businessConvertCustomer
+        from business;
+    </select>
+
+</mapper>

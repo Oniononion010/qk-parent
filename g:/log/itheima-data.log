@@ -1,0 +1,93 @@
+2026-10-28 09:17:12.092 [main] INFO  cn.itcast.App - Starting App using Java 25.0.3 with PID 16550 (/Users/onion/Downloads/AI工程化-基础全资料/轻客管家/轻客管家后端代码/qk-parent/qk-management/target/classes started by onion in /Users/onion/Downloads/AI工程化-基础全资料/轻客管家/轻客管家后端代码/qk-parent) 
+2026-10-28 09:17:12.093 [main] INFO  cn.itcast.App - No active profile set, falling back to 1 default profile: "default" 
+2026-10-28 09:17:12.668 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2026-10-28 09:17:12.675 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2026-10-28 09:17:12.676 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat] 
+2026-10-28 09:17:12.677 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43] 
+2026-10-28 09:17:12.701 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+2026-10-28 09:17:12.702 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 586 ms 
+2026-10-28 09:17:13.081 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html] 
+2026-10-28 09:17:13.200 [main] INFO  c.b.m.s.MybatisPlusApplicationContextAware - Register ApplicationContext instances org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@640f11a1 
+2026-10-28 09:17:13.264 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2026-10-28 09:17:13.268 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop' 
+2026-10-28 09:17:13.278 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled. 
+2026-10-28 09:17:13.285 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+ 
+2026-10-28 09:33:20.004 [main] INFO  cn.itcast.App - Starting App using Java 25.0.3 with PID 20868 (/Users/onion/Downloads/AI工程化-基础全资料/轻客管家/轻客管家后端代码/qk-parent/qk-management/target/classes started by onion in /Users/onion/Downloads/AI工程化-基础全资料/轻客管家/轻客管家后端代码/qk-parent) 
+2026-10-28 09:33:20.005 [main] INFO  cn.itcast.App - No active profile set, falling back to 1 default profile: "default" 
+2026-10-28 09:33:20.569 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2026-10-28 09:33:20.577 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2026-10-28 09:33:20.578 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat] 
+2026-10-28 09:33:20.578 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43] 
+2026-10-28 09:33:20.603 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+2026-10-28 09:33:20.603 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 577 ms 
+2026-10-28 09:33:20.970 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html] 
+2026-10-28 09:33:21.093 [main] INFO  c.b.m.s.MybatisPlusApplicationContextAware - Register ApplicationContext instances org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3a1dd365 
+2026-10-28 09:33:21.158 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2026-10-28 09:33:21.161 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop' 
+2026-10-28 09:33:21.168 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled. 
+2026-10-28 09:33:21.176 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+ 
+2026-10-28 09:36:10.470 [main] INFO  cn.itcast.App - Starting App using Java 25.0.3 with PID 20914 (/Users/onion/Downloads/AI工程化-基础全资料/轻客管家/轻客管家后端代码/qk-parent/qk-management/target/classes started by onion in /Users/onion/Downloads/AI工程化-基础全资料/轻客管家/轻客管家后端代码/qk-parent) 
+2026-10-28 09:36:10.470 [main] INFO  cn.itcast.App - No active profile set, falling back to 1 default profile: "default" 
+2026-10-28 09:36:11.027 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2026-10-28 09:36:11.035 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2026-10-28 09:36:11.036 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat] 
+2026-10-28 09:36:11.036 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43] 
+2026-10-28 09:36:11.061 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+2026-10-28 09:36:11.061 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 570 ms 
+2026-10-28 09:36:11.427 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html] 
+2026-10-28 09:36:11.547 [main] INFO  c.b.m.s.MybatisPlusApplicationContextAware - Register ApplicationContext instances org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6c5945a7 
+2026-10-28 09:36:11.610 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2026-10-28 09:36:11.618 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/' 
+2026-10-28 09:36:11.623 [main] INFO  cn.itcast.App - Started App in 1.324 seconds (process running for 1.567) 
+2026-10-28 10:13:00.180 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete 
+2026-10-28 10:13:00.208 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete 
+2026-10-28 11:16:32.474 [main] INFO  cn.itcast.App - Starting App using Java 25.0.3 with PID 4273 (/Users/onion/Downloads/AI工程化-基础全资料/轻客管家/轻客管家后端代码/qk-parent/qk-management/target/classes started by onion in /Users/onion/Downloads/AI工程化-基础全资料/轻客管家/轻客管家后端代码/qk-parent) 
+2026-10-28 11:16:32.475 [main] INFO  cn.itcast.App - No active profile set, falling back to 1 default profile: "default" 
+2026-10-28 11:16:33.187 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2026-10-28 11:16:33.195 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2026-10-28 11:16:33.196 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat] 
+2026-10-28 11:16:33.196 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43] 
+2026-10-28 11:16:33.222 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+2026-10-28 11:16:33.223 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 712 ms 
+2026-10-28 11:16:33.646 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html] 
+2026-10-28 11:16:33.779 [main] INFO  c.b.m.s.MybatisPlusApplicationContextAware - Register ApplicationContext instances org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3a1dd365 
+2026-10-28 11:16:33.845 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2026-10-28 11:16:33.854 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/' 
+2026-10-28 11:16:33.859 [main] INFO  cn.itcast.App - Started App in 1.593 seconds (process running for 1.958) 
+2026-10-28 11:16:39.195 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2026-10-28 11:16:39.195 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2026-10-28 11:16:39.196 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms 
+2026-10-28 11:17:03.683 [http-nio-8080-exec-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting... 
+2026-10-28 12:12:00.233 [http-nio-8080-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting... 
+2026-10-28 12:12:00.309 [http-nio-8080-exec-3] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2ba7f82e 
+2026-10-28 12:12:00.313 [http-nio-8080-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed. 

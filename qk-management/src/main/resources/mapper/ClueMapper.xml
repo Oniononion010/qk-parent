@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.itcast.mapper.ClueMapper">
+
+
+    <!--配置统计的sql-->
+    <select id="overview" resultType="cn.itcast.vo.OverviewVo">
+        select
+            count(*) clueTotal,
+            count(if(status = 1, 1,null)) clueWaitAllot ,
+            count(if(status = 2, 2,null)) clueWaitFollow,
+            count(if(status = 3, 3,null)) clueFollowing,
+            count(if(status = 4, 4,null)) clueFalse,
+            count(if(status = 5, 5,null)) clueConvertBusiness
+
+        from clue;
+    </select>
+    <select id="pool" resultType="cn.itcast.pojo.Clue">
+
+        select clue.*, activity.name as activityName
+        from clue
+        left join activity on clue.activity_id = activity.id
+        <where>
+            <if test="clueDTO.clueId != null">
+                clue.id = #{clueDTO.clueId}
+            </if>
+            <if test="clueDTO.phone != null and clueDTO.phone!=''">
+                and clue.phone like concat ('%', #{clueDTO.phone}, '%')
+            </if>
+            <if test="clueDTO.channel != null">
+                and clue.channel = #{clueDTO.channel}
+            </if>
+        </where>
+        order by clue.update_time
+    </select>
+
+
+    <select id="findByPageAndCondition" resultType="cn.itcast.pojo.Clue">
+        select clue.* , user.name as assignName
+        from clue
+        left join user on clue.user_id = user.id
+        <where>
+            <if test="clueDTO.clueId != null">
+                clue.id = #{clueDTO.clueId}
+            </if>
+            <if test="clueDTO.phone != null and clueDTO.phone!=''">
+               and clue.phone like concat( '%' , #{clueDTO.phone}, '%')
+            </if>
+            <if test="clueDTO.status != null">
+                and clue.status = #{clueDTO.status}
+            </if>
+            <if test="clueDTO.channel != null">
+                and clue.channel = #{clueDTO.channel}
+            </if>
+            <if test="clueDTO.assignName != null and clueDTO.assignName!=''">
+                and user.assignName like concat( '%' , #{clueDTO.assignName}, '%')
+            </if>
+
+        </where>
+        order by clue.update_time desc
+
+    </select>
+
+
+    <!--
+        如果查询的多表之间有一对多 或者一多一的关系, 并且查询A表以及B表的所有数据, 此时必须使用多表的动态标签完成
+        步骤:
+            1. 将resultType 修改成resultMap
+            2.定义<ResultMap>标签配置特殊列的映射关系
+            3. 如何配置
+                通过<id>标签设置实体类的主键和表的主键列对应关系, 而且主键必须需要设置
+                通过<result>标签设置普通列实体类和表的列对应关系
+                如果列重复了, 没有标注的话, 默认从左开始匹配
+                如果列名和属性名保持一致, 则可以添加autoMapping="true"简化映射的填写
+
+            4. 对特殊配置一对多或者一对一
+                一旦后表的内容和前表的内容冲突了, 我们必须手动映射!!!否则默认将前表的数据设置给后表的实体类对象!!!!!!!!!!!!!
+                一对多:
+                    <collection>
+                         ofType: 配置集合内部的数据类型
+                         autoMapping: 自动映射
+    -->
+    <resultMap id="clue_clueTrackRecords_rm" type="cn.itcast.pojo.Clue" autoMapping="true">
+        <id column="id" property="id"></id>
+        <collection property="trackRecords" ofType="cn.itcast.pojo.ClueTrackRecord" autoMapping="true">
+            <id column="ctr_id" property="id"></id>
+            <result column="ctr_user_id" property="userId"></result>
+            <result column="ctr_subject" property="subject"></result>
+            <result column="ctr_level" property="level"></result>
+            <result column="ctr_next_time" property="nextTime"></result>
+            <result column="ctr_create_time" property="createTime"></result>
+        </collection>
+
+    </resultMap>
+    <select id="findById" resultMap="clue_clueTrackRecords_rm">
+        select
+            clue.*,
+            ctr.*,
+            user.name as assignName,
+            ctr.id ctr_id,
+            ctr.user_id ctr_user_id,
+            ctr.subject ctr_subject,
+            ctr.level ctr_level,
+            ctr.next_time ctr_next_time,
+            ctr.create_time ctr_create_time
+        from clue
+        left join clue_track_record ctr on ctr.clue_id = clue.id
+        left join user on ctr.user_id = user.id
+        where clue.id = #{id}
+    </select>
+</mapper>
+

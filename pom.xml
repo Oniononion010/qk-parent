@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>cn.itcast</groupId>
+    <artifactId>qk-parent</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <!--聚合-->
+    <modules>
+        <module>qk-common</module>
+        <module>qk-entities</module>
+        <module>qk-management</module>
+    </modules>
+
+    <!--导入springboot的父工程-->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.4.8</version>
+        <relativePath/>
+    </parent>
+
+
+    <properties>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <qk.version>1.0-SNAPSHOT</qk.version>
+        <mp.version>3.5.17</mp.version>
+    </properties>
+
+    <!--定义好家规和家产-->
+    <!--家产-->
+    <dependencies>
+        <!--导入lombok-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
+    </dependencies>
+    <!--家规-->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>cn.itcast</groupId>
+                <artifactId>qk-common</artifactId>
+                <version>${qk.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.itcast</groupId>
+                <artifactId>qk-entities</artifactId>
+                <version>${qk.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-jsqlparser</artifactId>
+                <version>${mp.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
+                <version>${mp.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>

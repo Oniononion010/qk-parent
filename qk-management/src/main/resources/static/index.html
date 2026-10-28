@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--
+    1.请求方式必须是Post请求
+    2.数据提交格式必须设置为enctype="multipart/form-data"
+    3.必须使用上传项完成上传 <input type="file" name="file">
+-->
+<form action="http://localhost:8080/upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="file">
+    <input type="text" name="username">
+    <button type="submit">上传</button>
+</form>
+</body>
+</html>
